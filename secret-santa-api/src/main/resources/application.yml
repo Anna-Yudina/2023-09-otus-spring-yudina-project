@@ -1,7 +1,14 @@
 server:
-  port: 8080
+  port: 8082
 
 spring:
+  application:
+    name: secret-santa-api
+  cloud:
+    loadbalancer:
+      ribbon:
+        enabled: false
+
   datasource:
     url: jdbc:postgresql://localhost:5430/projectDB
     username: postgres
@@ -27,3 +34,10 @@ spring:
 logging:
   level:
     org.springframework.jdbc.core.JdbcTemplate: TRACE
+
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:8761/eureka
+    register-with-eureka: true
+    fetch-registry: true
