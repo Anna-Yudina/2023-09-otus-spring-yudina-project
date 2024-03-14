@@ -1,7 +1,19 @@
-h2 {
+.text {
     color: crimson;
+    font: italic small-caps bold 30px/2 cursive;
 }
 
 .image {
-    width: 500px;
+    width: 400px;
+}
+
+.santa {
+    width: 300px;
+}
+
+.start:hover,
+.start {
+    font: italic small-caps bold 30px/2 cursive;
+    text-decoration: none;
+    color: #274108;
 }
